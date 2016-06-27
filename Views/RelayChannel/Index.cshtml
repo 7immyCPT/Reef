@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Reef.Models.RelayChannelModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Channel.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Relay.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Channel.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Relay.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RelayChannelId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RelayChannelId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RelayChannelId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model Reef.Models.RelayChannelModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RelayChannelModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Channel.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Channel.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relay.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relay.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RelayChannelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
